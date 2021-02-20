@@ -1,0 +1,33 @@
+.page {
+  &-container {
+    margin: 0 auto;
+    width: $bp-lg;
+  }
+}
+
+.card {
+  &-container {
+    display: grid;
+    grid-template-rows: auto;
+    width: 90%;
+    background-color: $color-light-gray;
+    margin: 0.5rem auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    padding: 1rem;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &-img {
+    background-color: pink;
+    font-size: 3rem;
+  }
+  &-name {
+    font-weight: bold;
+  }
+  &-types {
+    font-size: 2rem;
+    color: orange;
+  }
+}

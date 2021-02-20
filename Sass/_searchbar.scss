@@ -1,0 +1,22 @@
+.searchbar {
+  &-container {
+    display: flex;
+    button {
+      padding: 0 1rem;
+      font-weight: bold;
+      background-color: $color-dark;
+      color: $text-light;
+      border-style: none;
+    }
+  }
+
+  &-input {
+    width: 20rem;
+    height: 4rem;
+    padding: 0 0.5rem;
+    &:focus {
+      outline: none;
+      border: 0.1rem solid $color-light-gray;
+    }
+  }
+}

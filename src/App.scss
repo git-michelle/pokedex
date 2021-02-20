@@ -1,0 +1,82 @@
+h2,
+h3 {
+  line-height: 1.2;
+  color: #222; }
+
+h2 {
+  font-size: 3rem; }
+
+h3 {
+  font-size: 2rem; }
+
+p,
+li {
+  font-family: sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: #222; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 96rem) {
+    html {
+      font-size: 55%; } }
+
+body {
+  background-color: #f2f1f0;
+  margin: 0 auto; }
+
+ul {
+  list-style: none; }
+
+.searchbar-container {
+  display: flex; }
+  .searchbar-container button {
+    padding: 0 1rem;
+    font-weight: bold;
+    background-color: #222;
+    color: #fff;
+    border-style: none; }
+
+.searchbar-input {
+  width: 20rem;
+  height: 4rem;
+  padding: 0 0.5rem; }
+  .searchbar-input:focus {
+    outline: none;
+    border: 0.1rem solid #f2f1f0; }
+
+.page-container {
+  margin: 0 auto;
+  width: 128rem; }
+
+.card-container {
+  display: grid;
+  grid-template-rows: auto;
+  width: 90%;
+  background-color: #f2f1f0;
+  margin: 0.5rem auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 1rem;
+  justify-content: center;
+  text-align: center; }
+
+.card-img {
+  background-color: pink;
+  font-size: 3rem; }
+
+.card-name {
+  font-weight: bold; }
+
+.card-types {
+  font-size: 2rem;
+  color: orange; }

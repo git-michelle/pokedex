@@ -1,7 +1,12 @@
 import "./App.scss";
+import PokedexPage from "../src/pages/PokedexPage";
 
 function App() {
-  return <div className="App">hello</div>;
+  return (
+    <div>
+      <PokedexPage />
+    </div>
+  );
 }
 
 export default App;
