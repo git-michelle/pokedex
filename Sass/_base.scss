@@ -1,0 +1,98 @@
+// RESPONSIVE BREAKPOINTS
+$bp-lg: 128rem; //1280px
+$bp-md: 96rem; //960px
+$bp-sm: 60rem; //600px
+
+// SPACING VARIABLES
+$pad-lg: 12rem;
+$pad-md: 5rem;
+$pad-sm: 3rem;
+$pad-xs: 1.5rem;
+
+$marg-lg: 12rem;
+$marg-md: 5rem;
+$marg-sm: 3rem;
+$marg-xs: 1.5rem;
+
+@media (max-width: $bp-md) {
+  $pad-lg: 8rem;
+  $marg-lg: 8rem;
+}
+
+// COLOR VARIABLES
+$color-primary: #0066ff;
+
+$color-light-gray: #f2f1f0;
+$color-dark: #222;
+$text-dark: #222;
+$text-light: #fff;
+
+$type-bug: #a8b820;
+$type-dark: #705848;
+$type-dragon: #7038f8;
+$type-electric: #f8d030;
+$type-fairy: #ee99ac;
+$type-fighting: #c03028;
+$type-fire: #f08030;
+$type-flying: #a890f0;
+$type-ghost: #705898;
+$type-grass: #78c850;
+$type-ground: #e0c068;
+$type-ice: #98d8d8;
+$type-normal: #c4c4a4;
+$type-poison: #a040a0;
+$type-psychic: #f85888;
+$type-rock: #b8a038;
+$type-steel: #b8b8d0;
+$type-water: #6890f0;
+
+// FONT VARIABLES
+
+h2,
+h3 {
+  line-height: 1.2;
+  color: $text-dark;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p,
+li {
+  font-family: sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: $text-dark;
+}
+
+// BASICS
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  @media only screen and (max-width: $bp-md) {
+    font-size: 55%;
+  }
+}
+
+body {
+  background-color: $color-light-gray;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+}

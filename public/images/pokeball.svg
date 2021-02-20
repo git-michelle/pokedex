@@ -1,0 +1,16 @@
+<svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="31.5" cy="31.5" r="31" fill="#F6F6F6" fill-opacity="0.31" stroke="black"/>
+<circle cx="31.5" cy="31.5" r="31" fill="#FF0000" stroke="black"/>
+<rect y="30.0682" width="63" height="3.15" fill="#222222"/>
+<mask id="path-4-inside-1" fill="white">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 33.2182C0.892204 49.8162 14.6334 63 31.4539 63C48.2744 63 62.0157 49.8162 62.9079 33.2182H0Z"/>
+</mask>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 33.2182C0.892204 49.8162 14.6334 63 31.4539 63C48.2744 63 62.0157 49.8162 62.9079 33.2182H0Z" fill="#F6F6F6"/>
+<path d="M0 33.2182V32.2182H-1.0552L-0.998558 33.2719L0 33.2182ZM62.9079 33.2182L63.9064 33.2719L63.9631 32.2182H62.9079V33.2182ZM31.4539 62C15.1677 62 1.86239 49.2347 0.998558 33.1645L-0.998558 33.2719C-0.0779836 50.3976 14.0991 64 31.4539 64V62ZM61.9093 33.1645C61.0455 49.2347 47.7401 62 31.4539 62V64C48.8087 64 62.9859 50.3976 63.9064 33.2719L61.9093 33.1645ZM62.9079 32.2182H0V34.2182H62.9079V32.2182Z" fill="black" mask="url(#path-4-inside-1)"/>
+<circle cx="31.6432" cy="31.6432" r="9.09318" fill="#222222" stroke="black"/>
+<circle cx="31.6432" cy="31.6432" r="6.22955" fill="#F6F2E8" stroke="black"/>
+<circle cx="31.5" cy="31.5" r="4.36818" fill="#F7F2E8" stroke="black"/>
+<rect y="30.0682" width="63" height="3.15" fill="#222222"/>
+<circle cx="31.6432" cy="31.6432" r="6.22955" fill="#F6F2E8" stroke="black"/>
+<circle cx="31.5" cy="31.5" r="4.36818" fill="#F7F2E8" stroke="black"/>
+</svg>
