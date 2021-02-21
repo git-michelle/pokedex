@@ -1,10 +1,12 @@
 # Pokedex Mini
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Demo
+
+https://happy-curran-7b2880.netlify.app/
 
 ## Features
 
-- Rurn a card when searching for a Pokémon
+- Return a card when searching for a Pokémon
 - Each card includes the Pokémon's name, height, weight, types, abilities and base stats (hp/atk/def/special-atk/special-def/speed)
 - The card feature a sprite of the Pokémon
 - Color-styled types
@@ -26,9 +28,18 @@ You will also see any lint errors in the console.
 
 Starts SASS and React scripts concurrently for easy styling during dev.
 
+## About
+
+### Design
+
+- Total of 18 types, up to 2 per Pokémon.
+- Type color palette from https://bulbapedia.bulbagarden.net/wiki/Category:Type_color_templates
+
 ## Future Improvements
 
 - Refactoring code into standalone components
+- Displaying an error page
+- Auto-complete suggestions
 - Carousel for clicking through sprites
 - Responsive grid for showing random Pokémon on landing page
 
