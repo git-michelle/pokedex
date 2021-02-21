@@ -23,6 +23,7 @@ $marg-xs: 1.5rem;
 $color-primary: #0066ff;
 
 $color-light-gray: #f2f1f0;
+$color-dark-gray: #333;
 $color-dark: #222;
 $color-light: #fff;
 $text-dark: #222;
@@ -120,8 +121,8 @@ h3 {
 p,
 li {
   font-family: sans-serif;
-  font-size: 1.8rem;
-  line-height: 1.6;
+  font-size: 1.6rem;
+  line-height: 1.5;
   color: $text-dark;
 }
 

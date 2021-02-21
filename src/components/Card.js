@@ -34,7 +34,32 @@ const Card = (props) => {
           </li>
         </ul>
       </div>
-      <div className="card-stats">{props.stats}</div>
+
+      <div className="card-stats-container">
+        <div className="stat">
+          <span className="title">Hp:</span> {props.hp}
+        </div>
+        <div className="stat">
+          <span className="title">Atk:</span>
+          {props.attack}
+        </div>
+        <div className="stat">
+          <span className="title">Def:</span>
+          {props.defense}
+        </div>
+        <div className="stat">
+          <span className="title">Spcl-Atk:</span>
+          {props.specialAttack}
+        </div>
+        <div className="stat">
+          <span className="title">Spcl-Def:</span>
+          {props.specialAttack}
+        </div>
+        <div className="stat">
+          <span className="title">Speed:</span>
+          {props.speed}
+        </div>
+      </div>
     </div>
   );
 };

@@ -12,7 +12,7 @@ const PokedexPage = () => {
     name: "",
     types: [],
     abilities: [],
-    stats: [],
+    stats: [{}],
     height: "",
     weight: "",
     hp: "",
@@ -27,24 +27,21 @@ const PokedexPage = () => {
 
   const handleSearch = () => {
     axios.get(pokemonURL).then((res) => {
-      // console.log(res);
+      const data = res.data;
       setPokemonInfo({
-        id: res.data.id,
-        image: res.data.sprites.front_default,
-        name: res.data.name,
-        types: res.data.types,
-        // types: res.data.types[0].type.name,
-        abilities: res.data.abilities,
-        // abilities: res.data.abilities[0].ability.name,
-        height: res.data.height,
-        weight: res.data.weight,
-        // stats: res.data.stats,
-        hp: res.data.stats[0].base_stat,
-        attack: res.data.stats[1].base_stat,
-        defense: res.data.stats[2].base_stat,
-        specialAattack: res.data.stats[3].base_stat,
-        specialDefense: res.data.stats[4].base_stat,
-        speed: res.data.stats[5].base_stat,
+        id: data.id,
+        image: data.sprites.front_default,
+        name: data.name,
+        types: data.types,
+        abilities: data.abilities,
+        height: data.height,
+        weight: data.weight,
+        hp: data.stats[0].base_stat,
+        attack: data.stats[1].base_stat,
+        defense: data.stats[2].base_stat,
+        specialAttack: data.stats[3].base_stat,
+        specialDefense: data.stats[4].base_stat,
+        speed: data.stats[5].base_stat,
       });
       setInputValue(true);
     });
@@ -52,23 +49,32 @@ const PokedexPage = () => {
 
   return (
     <div className="page-container">
-      <div className="searchbar-container">
-        <form action="">
-          <input
-            type="text"
-            placeholder="Search Pokemon"
-            className="searchbar-input"
-            onChange={(e) => {
-              setPokemonName(e.target.value);
-            }}
+      <div className="search-container">
+        <div className="search-content">
+          <img
+            className="search-logo"
+            src="/images/pokeball.svg"
+            alt="pokeball logo"
           />
-        </form>
-        <button onClick={handleSearch}>Search</button>
+          <div className="searchbar-container">
+            <form action="">
+              <input
+                type="text"
+                placeholder="Search Pokemon"
+                className="searchbar-input"
+                onChange={(e) => {
+                  setPokemonName(e.target.value);
+                }}
+              />
+            </form>
+            <button onClick={handleSearch}>Search</button>
+          </div>
+        </div>
       </div>
-      <div className="test-div">
-        {!inputValue ? (
-          <h2>type to search for a pokemon</h2>
-        ) : (
+
+      <div className="pokedex-container">
+        {console.log(pokemonInfo.abilities)}
+        {inputValue && (
           <Card
             image={pokemonInfo.image}
             name={pokemonInfo.name}
@@ -76,7 +82,12 @@ const PokedexPage = () => {
             abilities={pokemonInfo.abilities}
             weight={pokemonInfo.weight}
             height={pokemonInfo.height}
-            stats={pokemonInfo.stats}
+            hp={pokemonInfo.hp}
+            attack={pokemonInfo.attack}
+            defense={pokemonInfo.defense}
+            specialAttack={pokemonInfo.specialAttack}
+            specialDefense={pokemonInfo.specialAttack}
+            speed={pokemonInfo.speed}
           />
         )}
       </div>

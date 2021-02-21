@@ -1,8 +1,12 @@
 .page {
   &-container {
     margin: 0 auto;
-    width: $bp-lg;
   }
+}
+
+.pokedex-container {
+  width: bp-lg;
+  margin-top: 9rem;
 }
 
 .card {
@@ -15,14 +19,17 @@
     border-radius: 1rem;
     background-color: $color-light;
     overflow: hidden;
-    padding: 1rem;
     justify-content: center;
     text-align: center;
   }
 
   &-img-container {
     width: 35rem;
-    height: 15rem;
+    height: 20rem;
+    background-color: $color-dark-gray;
+    img {
+      height: 20rem;
+    }
   }
 
   &-name {
@@ -45,6 +52,14 @@
     background-color: $color-light-gray;
     margin: 0 auto;
     width: 30rem;
+  }
+
+  &-stats-container {
+    margin: $marg-xs auto;
+    width: 30rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 1.6rem;
   }
 }
 
