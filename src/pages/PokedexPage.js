@@ -9,10 +9,10 @@ const PokedexPage = () => {
   const [pokemonInfo, setPokemonInfo] = useState({
     id: "",
     image: "",
+    sprites: {},
     name: "",
     types: [],
     abilities: [],
-    stats: [{}],
     height: "",
     weight: "",
     hp: "",
@@ -26,25 +26,36 @@ const PokedexPage = () => {
   const pokemonURL = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
 
   const handleSearch = () => {
-    axios.get(pokemonURL).then((res) => {
-      const data = res.data;
-      setPokemonInfo({
-        id: data.id,
-        image: data.sprites.front_default,
-        name: data.name,
-        types: data.types,
-        abilities: data.abilities,
-        height: data.height,
-        weight: data.weight,
-        hp: data.stats[0].base_stat,
-        attack: data.stats[1].base_stat,
-        defense: data.stats[2].base_stat,
-        specialAttack: data.stats[3].base_stat,
-        specialDefense: data.stats[4].base_stat,
-        speed: data.stats[5].base_stat,
-      });
-      setInputValue(true);
-    });
+    axios
+      .get(pokemonURL)
+      .then((res) => {
+        const data = res.data;
+        setPokemonInfo({
+          id: data.id,
+          image: data.sprites.front_default,
+          sprites: data.sprites,
+          name: data.name,
+          types: data.types,
+          abilities: data.abilities,
+          height: data.height,
+          weight: data.weight,
+          hp: data.stats[0].base_stat,
+          attack: data.stats[1].base_stat,
+          defense: data.stats[2].base_stat,
+          specialAttack: data.stats[3].base_stat,
+          specialDefense: data.stats[4].base_stat,
+          speed: data.stats[5].base_stat,
+        });
+        setInputValue(true);
+      })
+      .catch((err) => console.log(err));
+  };
+
+  const handleEnter = (e) => {
+    if (e.charCode === 13) {
+      e.preventDefault();
+      handleSearch();
+    }
   };
 
   return (
@@ -65,6 +76,7 @@ const PokedexPage = () => {
                 onChange={(e) => {
                   setPokemonName(e.target.value);
                 }}
+                onKeyPress={handleEnter}
               />
             </form>
             <button onClick={handleSearch}>Search</button>
@@ -73,10 +85,10 @@ const PokedexPage = () => {
       </div>
 
       <div className="pokedex-container">
-        {console.log(pokemonInfo.abilities)}
         {inputValue && (
           <Card
             image={pokemonInfo.image}
+            sprites={pokemonInfo.sprites}
             name={pokemonInfo.name}
             types={pokemonInfo.types}
             abilities={pokemonInfo.abilities}
