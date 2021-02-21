@@ -12,6 +12,7 @@ const PokedexPage = () => {
     name: "",
     types: [],
     abilities: [],
+    stats: [],
     height: "",
     weight: "",
     hp: "",
@@ -31,10 +32,13 @@ const PokedexPage = () => {
         id: res.data.id,
         image: res.data.sprites.front_default,
         name: res.data.name,
-        types: res.data.types[0].type.name,
-        abilities: res.data.abilities[0].ability.name,
+        types: res.data.types,
+        // types: res.data.types[0].type.name,
+        abilities: res.data.abilities,
+        // abilities: res.data.abilities[0].ability.name,
         height: res.data.height,
         weight: res.data.weight,
+        // stats: res.data.stats,
         hp: res.data.stats[0].base_stat,
         attack: res.data.stats[1].base_stat,
         defense: res.data.stats[2].base_stat,
@@ -69,8 +73,10 @@ const PokedexPage = () => {
             image={pokemonInfo.image}
             name={pokemonInfo.name}
             types={pokemonInfo.types}
-            info={pokemonInfo.height}
-            stats={pokemonInfo.attack}
+            abilities={pokemonInfo.abilities}
+            weight={pokemonInfo.weight}
+            height={pokemonInfo.height}
+            stats={pokemonInfo.stats}
           />
         )}
       </div>

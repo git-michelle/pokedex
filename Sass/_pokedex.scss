@@ -9,25 +9,45 @@
   &-container {
     display: grid;
     grid-template-rows: auto;
-    width: 90%;
+    width: 35rem;
     background-color: $color-light-gray;
-    margin: 0.5rem auto;
+    margin: 0 auto;
     border-radius: 1rem;
+    background-color: $color-light;
     overflow: hidden;
     padding: 1rem;
     justify-content: center;
     text-align: center;
   }
 
-  &-img {
-    background-color: pink;
-    font-size: 3rem;
+  &-img-container {
+    width: 35rem;
+    height: 15rem;
   }
+
   &-name {
     font-weight: bold;
   }
   &-types {
-    font-size: 2rem;
-    color: orange;
+    margin: 1rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+
+    .pokemon-type {
+      padding: 1rem;
+      margin: 0.3rem;
+      border-radius: 1rem;
+    }
   }
+
+  &-basic-info {
+    background-color: $color-light-gray;
+    margin: 0 auto;
+    width: 30rem;
+  }
+}
+
+span.title {
+  font-weight: bold;
 }
